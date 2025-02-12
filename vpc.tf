@@ -2,7 +2,7 @@
 provider "google" {
   project = "imposing-muse-421813"
   region = "us-central1"
-  credentials = file("./mnt/workspace/mujeer") 
+  credentials = file("./mnt/workspace/imposing-muse-421813-9ab47cd1c563.json") 
 }
 
 # Resource: VPC
