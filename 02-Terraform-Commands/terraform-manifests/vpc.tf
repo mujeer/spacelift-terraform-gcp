@@ -1,20 +1,40 @@
 # Terraform Provider Configuration: google
 provider "google" {
   project = "gcplearn9"
-  region = "us-central1"
+  region = var.region
 }
 
 # Resource: VPC
 resource "google_compute_network" "myvpc" {
-  name = "vpc1"
+  name =  var.vpc_name
   auto_create_subnetworks = false   
 }
 
 # Resource: Subnet
 resource "google_compute_subnetwork" "mysubnet" {
-  name          = "subnet1"
-  region        = "us-central1"
-  ip_cidr_range = "10.128.0.0/20"
+  name          =  var.subnet_name
+  region        =  var.region
+  ip_cidr_range =  var.cidr
   network       = google_compute_network.myvpc.id  // GET VPC ID
 }
 
+variable "vpc_name" {
+  type = string
+  default = "vpc1"
+  
+}
+variable "subnet_name" {
+  type = string
+  default = "subnet1"
+  
+}
+variable "region" {
+  type = string
+  default = "us-central1"
+  
+  
+}
+variable "cidr" {
+  type = string
+  default = "10.128.0.0/20"
+}
