@@ -14,7 +14,7 @@ provider "google" {
 }
 
 resource "google_compute_network" "mujeer_vpc" {
-    name = "mujeer"
+    name = "mujeer-1"
   
 }
 
