@@ -9,6 +9,7 @@ terraform {
 
 provider "google" {
     project = "imposing-muse-421813"
+    credentials = file("./mnt/workspace/gcp.json")
   
 }
 
