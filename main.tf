@@ -87,3 +87,5 @@ resource "google_compute_firewall" "fw_http" {
   source_ranges = ["0.0.0.0/0"]
   target_tags   = ["webserver-tag"]
 }
+
+#updated 
