@@ -10,7 +10,7 @@ terraform {
 
 provider "google" {
     project = "imposing-muse-421813"
-    credentials = file("./mnt/workspace/clientLibraryConfig-demo-spacelift-io.json")
+    credentials = file("/mnt/workspace/clientLibraryConfig-demo-spacelift-io.json")
 }
 
 resource "google_compute_network" "mujeer_vpc" {
