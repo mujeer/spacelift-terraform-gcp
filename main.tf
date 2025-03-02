@@ -10,6 +10,7 @@ terraform {
 
 provider "google" {
     project = "imposing-muse-421813"
+    access_token = file("./mnt/workspace/clientLibraryConfig-demo-spacelift-io.json")
   
 }
 
